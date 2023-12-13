@@ -23,6 +23,11 @@ const StudentSchema = new mongoose.Schema({
     profile: {
         type: String,
     },
+    dateJoined:{
+        type:Date,
+        required:true,
+        default:Date.now
+    }
 }, { timestamps: true })
 
 module.exports = mongoose.model("Student",StudentSchema);
